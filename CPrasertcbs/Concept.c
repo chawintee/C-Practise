@@ -12,9 +12,24 @@ void seq(){
     printf("%lf celsius = %lf fahrenheit", celsius, fahrenheit);
 }
 
-int main(){
-    seq();
+void condition(){
+    int age;
+    printf("enter your age :");
+    scanf(" %d", &age);
+    if(age <= 6){
+        printf("you are a kid.\n");
+        printf("free of charge.\n");
+    } else{
+        printf("you are an adult.\n");
+        printf("199 Baht.\n");
+    }
+    printf("bye...\n");
+}
 
+int main(){
+//    seq();
+
+    condition();
     getch();
     return 0;
 }
