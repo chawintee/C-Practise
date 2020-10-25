@@ -26,10 +26,29 @@ void condition(){
     printf("bye...\n");
 }
 
+void repetition(){
+//    int sum = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
+
+//    int sum = 0 ;
+//    for(int i=1;i <= 100;i = i + 1){
+//        sum = sum + i;
+//    }
+
+
+    int i ;
+    int sum = 0;
+    for(i=1;i<=100;i++){
+        sum += i;
+    }
+
+    printf("%d",sum);
+}
+
 int main(){
 //    seq();
+//    condition();
 
-    condition();
+    repetition();
     getch();
     return 0;
 }
