@@ -4,12 +4,15 @@
 #include <stdio.h>
 #include <conio.h>
 
+// function
 int rectangle(int w, int h){
     int area ;
     area = w * h;
     return area;
 }
 
+
+// subroutine, procedure
 void box(int w, int h){
     int i, j;
     for(i=1; i<=h ;i++){
