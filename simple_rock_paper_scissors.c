@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctype.h>
 
 //input
 
@@ -9,7 +10,8 @@ char playerShape()
     char shape;
     printf("(r)ock, (p)aper, (s)cissors, (q)uit :  ");
     scanf(" %c", &shape);
-    return shape;
+    // return shape;
+    return tolower(shape);
 }
 
 char computerShape()
@@ -30,27 +32,29 @@ int main()
     // computerShape();
     char player, computer;
     player = playerShape();
+    while (player != 'q')
+    {
     computer = computerShape();
-    if (player == 'r' || player == 'p' || player == 's')
-    {
-        if (player == 'r' && computer == 's' ||player == 'p' && computer == 'r' ||player == 's' && computer == 'p' )
-        {
-            printf("player : %c , computer : %c \n", player, computer);
-            printf("You win");
-        }else if (player == computer)
-        {
-            printf("player : %c , computer : %c \n", player, computer);
-            printf("You tie");
-        }else {
-            printf("player : %c , computer : %c \n", player, computer);
-            printf("You lose");
+    printf("player : %c , computer : %c \n", player, computer);
+    if (player == 'r' || player == 'p' || player == 's')    {
+        if (player == 'r' && computer == 's' || player == 'p' && computer == 'r' || player == 's' && computer == 'p') {
+            printf("You win\n");
         }
-        
+        else if (player == computer){
+            printf("You tie\n");
+        }
+        else{
+            printf("You lose\n");
+        }
+        player = playerShape();
     }
-    else
-    {
+    else {
         printf("Not Ok");
+        player = 'q';
     }
+     
+    }
+    
 
     return 0;
 }
