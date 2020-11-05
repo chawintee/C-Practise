@@ -34,9 +34,13 @@ Q solveEq2(double a,double b, double c){
 int main() {
     double a,b,c;
     double x1,x2;
-    a = 2;
-    b = 7;
-    c = 3;
+    // a = 2;
+    // b = 7;
+    // c = 3;
+
+    printf("enter a b c ->");
+    scanf("%lf%lf%lf",&a,&b,&c);
+
     solveEq1(a,b,c, &x1, &x2);
     printf("x1 = %.2f, x2 = %.2f\n",x1,x2);
     printf("prove it : %.2f\n", a * x1 * x1 + b * x1 + c);
