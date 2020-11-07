@@ -54,7 +54,7 @@ void have_array_v3(){
     }
     avgM = sumM / cntM;
     avgF = sumF / cntF;
-    avg = sum / cnt;
+    avg = sum / cnt; 
     printf("avgM = %.2f\n",avgM);
     printf("avgF = %.2f\n",avgF);
     printf("avg = %.2f\n",avg);
