@@ -8,6 +8,7 @@ double bmi(int height, int weight){
 //typedef structure can collect defferent variable type but array 2 dimention can not.
 
 typedef struct{
+    char *name;
     int height, weight;
     char gender;
 } Person;
@@ -21,18 +22,19 @@ void demo(){
     // p[2] = {175, 72, 'M'};
 
     Person p[] = {
-        {170,70,'M'},
-        {165,55,'F'},
-        {175,72,'M'},
-        {162,48,'F'},
-        {169,50,'F'},
-        {179,70,'M'},
+        {"Fon",170,70,'M'},
+        {"Fah",165,55,'F'},
+        {"Noon",175,72,'M'},
+        {"Fai",162,48,'F'},
+        {"Mint",169,50,'F'},
+        {"Dream",179,70,'M'},
     };
     // printf("%d\n",sizeof(p));
     // printf("%d\n",sizeof(p[0]));
     int size = sizeof(p)/sizeof(p[0]);
     for(int i = 0; i < size ; i++){
-    printf("height = %3d,   weight = %3d,   bmi = %3.2f\n",p[i].height,p[i].weight,bmi(p[i].height,p[i].weight));
+    printf("%7s : height = %3d,   weight = %3d,   bmi = %3.2f\n",
+    p[i].name,p[i].height,p[i].weight,bmi(p[i].height,p[i].weight));
     }
 
 }
