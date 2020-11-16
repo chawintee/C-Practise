@@ -9,6 +9,7 @@ char *strtag(char *s, char *tag){
     return tmp; // return ไม่ได้เพราะว่า lifecycle ของตัวแปรอยู่แค่ในเฉพาะ function
 }
 
+//v.2 นิยมใช้
 char  *strtag2(char *dest, char *s, char *tag){
     sprintf(dest,"<%s><%s></%s>",tag,s,tag);
     printf("dest    = %s   (%p)\n",dest,dest);
