@@ -22,7 +22,7 @@ void demo1(){
 
 
 void sizeofvariable(){
-        printf("%lf\n",pow(2,31) - 1);
+        printf("%lf\n",pow(2,31) - 1); // 1byte = 8bit -> int 4 byte = 32 bit -> ตัด 1 bit ออกไปเอาไว้เก็บเครื่องหมาย ,-1 คือนับจาก 0 -> อันนี้คือค่าที่เก็บได้จริงๆ
     printf("%d\n", INT_MAX);
     printf("%d\n", INT_MIN);
     printf("%lf\n",pow(2,32) - 1);
