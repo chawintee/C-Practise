@@ -21,7 +21,7 @@ int main(){
     //or
     // printf("%s \n",strjoin(planers, sz, "->",buf ));
     printf("%s \n",strjoin(planers, sz, ",",buf ));
-    printf("%s \n",strjoin(planers, sz, -,",buf ));
+    printf("%s \n",strjoin(planers, sz, "-",buf ));
 
 
 
