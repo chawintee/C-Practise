@@ -4,8 +4,8 @@
 #include<ctype.h>
 
 
-#define NUM_ROWS 5
-#define NUM_COLS 5
+#define NUM_ROWS 8
+#define NUM_COLS 8
 #define TOTAL_NUM NUM_ROWS * NUM_COLS
 
 
@@ -52,7 +52,7 @@ void createcard(){
     for (int i = 0 ; i < NUM_ROWS; i++){
         printf("|");
         for (int j = 0; j< NUM_COLS; j++){
-            if(i==2 && j==2){
+            if(i== NUM_ROWS/2 && j== NUM_COLS / 2){
                 printf("   |");
 
             }else{
@@ -71,22 +71,29 @@ void callNumber() {
     }
     shuffle(a, TOTAL_NUM);
     printf("press enter key to call a number or 'q' to quit: ");
-    for(int j = 0 ; j < TOTAL_NUM ; j++){
+    for(int i = 0 ; i < TOTAL_NUM ; i++){
         if(toupper(getchar()) == 'Q'){
-
+            break;
         }
+        printf("%d\n", a[i]);
     }
-    
+    printf("good bye ... \n");
 }
 
 
 int main(){
     srand(time(NULL)); //seed number
+
+    int player;
+    printf("How many player -> ");
+    scanf("%d",&player);
     
-    for(int i = 0; i< 10; i++){
+    for(int i = 0; i< player; i++){
     createcard();
-    printf("\n");
+    printf("\n\n");
     }
+
+    callNumber();
 
     return 0;
 }
