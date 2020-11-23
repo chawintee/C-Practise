@@ -23,8 +23,10 @@ int main(){
     }
     fclose(f);
     for (int i = 0 ; i < 26 ; i++){
+        if(a[i] != 0){
         // printf("%c = %3d :\n",i + 'A', a[i]);
         printf("%c = %3d : %s\n",i + 'A', a[i], strrepeat(dest,"*",a[i]));
+        }
     }
 
     return 0;
